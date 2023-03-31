@@ -1,0 +1,13 @@
+@mixin container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+@mixin min-height {
+  min-height: 75vh;
+}

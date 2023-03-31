@@ -1,0 +1,32 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/mixins/mixin.scss";
+
+.container-footer {
+  background-color: $color-black-3;
+
+  .container {
+    @include container;
+
+    .wrapper-footer {
+      display: flex;
+      gap: 20px;
+      font-size: 21px;
+      .footer-link {
+        display: block;
+        color: $color-white;
+
+        .img-link {
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+            color: $color-orange-3;
+          }
+        }
+      }
+    }
+
+    .copyWrite {
+      color: $color-white;
+    }
+  }
+}

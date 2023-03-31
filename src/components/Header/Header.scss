@@ -1,0 +1,90 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/mixins/mixin.scss";
+
+.container-header {
+  background-color: $color-black-3;
+
+  .container {
+    @include container;
+
+    .img-Logo {
+      display: block;
+    }
+
+    .wrapper-navBar {
+      .menuBars-icon,
+      .menuTime-close {
+        display: none;
+        @media (max-width: $m-device) {
+          display: block;
+          font-size: 24px;
+          color: $color-white;
+          margin-left: auto;
+        }
+      }
+
+      .menuBars-active {
+        position: absolute;
+        display: flex;
+        background-color: #222;
+        right: 0;
+        top: 0;
+        height: calc(100% + 19px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        border: 2px solid $color-white;
+      }
+
+      .menuBars {
+        display: flex;
+        gap: 20px;
+
+        @media (max-width: $m-device) {
+          display: none;
+        }
+      }
+
+      .navBar-link {
+        @media (max-width: $m-device) {
+          padding: 10px;
+          width: 100%;
+          text-align: center;
+          background-color: #383636;
+          border-radius: 5px;
+          border: 2px solid $color-white;
+        }
+
+        a {
+          position: relative;
+          display: inline-block;
+          color: $color-white;
+          transition: 0.2s;
+
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 2px;
+            width: 0;
+            background: $color-yellow-2;
+            margin-top: 2px;
+            transition: 0.3s;
+          }
+
+          &:hover:after {
+            width: 100%;
+          }
+
+          @media (max-width: $m-device) {
+            &:active {
+              background-color: $color-black-3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

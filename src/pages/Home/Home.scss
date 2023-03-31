@@ -1,0 +1,10 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/mixins/mixin.scss";
+
+.container {
+  @include container;
+}
+
+@mixin min-height {
+  min-height: 75vh;
+}

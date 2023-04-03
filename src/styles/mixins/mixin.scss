@@ -9,5 +9,15 @@
 }
 
 @mixin min-height {
-  min-height: 75vh;
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
+
+@mixin btn {
+  background-color: #222;
+  color: #fccc40;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
 }

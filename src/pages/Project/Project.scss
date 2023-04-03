@@ -1,10 +1,25 @@
 @import "../../styles/utils/variables.scss";
 @import "../../styles/mixins/mixin.scss";
 
-.container {
-  @include container;
-}
-
 .min-height {
   @include min-height;
+
+  .container {
+    @include container;
+  }
+
+  .container-mainProject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 64px;
+    gap: 20px;
+
+    .TitleProject {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+  }
 }

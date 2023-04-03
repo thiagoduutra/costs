@@ -1,10 +1,40 @@
 @import "../../styles/utils/variables.scss";
 @import "../../styles/mixins/mixin.scss";
 
-.container {
-  @include container;
-}
+.min-height {
+  @include min-height;
 
-@mixin min-height {
-  min-height: 75vh;
+  .container {
+    @include container;
+
+    .container-mainHome {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 64px;
+      gap: 20px;
+
+      .titleHome {
+        font-size: 40px;
+        margin-bottom: 8px;
+      }
+
+      .span-Costs {
+        color: $color-orange-3;
+        background-color: $color-black-3;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .phraseHome {
+        margin-bottom: 24px;
+      }
+
+      .imgHome {
+        width: 40%;
+      }
+    }
+  }
 }
